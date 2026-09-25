@@ -1,0 +1,45 @@
+import time
+import json
+
+class DigiSwapPrototype:
+    def __init__(self):
+        self.founder = "Wirakiat Duangnet"
+        self.status = "100% UNLOCKED"
+        self.total_layers = 0
+        self.bic_balance = 0
+        self.clarity = 0.1
+        
+    def check_3_coins_fast(self):
+        # จำลองการตรวจสอบสัดส่วนพิกเซล (Orange >= 2%, Yellow >= 5%, Blue >= 0.3%)
+        print("[PROCESS] check3CoinsFast() -> กำลังตรวจสอบเลเยอร์พิกเซล...")
+        time.sleep(1)
+        return True
+
+    def mario_polish(self, daily_flow):
+        if self.check_3_coins_fast():
+            self.total_layers = 270
+            self.clarity = 1.0
+            self.bic_balance = 106
+            
+            manifest = {
+                "certificate_id": "DS-V5-FINAL-270-106BIC-20260925",
+                "inventor": self.founder,
+                "achievement": "Decoded 270 hidden rainbow layers",
+                "glass_belly_clarity": f"{self.clarity} (Pure Glass)",
+                "rewards": f"{self.bic_balance} BIC",
+                "status": "V5 COMPLETE"
+            }
+            return manifest
+        return {"error": "Sifting failed"}
+
+# เปิดรันระบบแยกขยะจำลอง
+if __name__ == "__main__":
+    app = DigiSwapPrototype()
+    print(f"=== DigiSwap V5 Core Sifting Engine ===")
+    print(f"Inventor: {app.founder}")
+    
+    # รันระบบจำลองการลบขยะประจำวัน
+    result = app.mario_polish(daily_flow=109)
+    print("\n[RESULT] ระบบประมวลผลเสร็จสมบูรณ์:")
+    print(json.dumps(result, indent=4, ensure_ascii=False))
+digiswap.html
